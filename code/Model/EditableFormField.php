@@ -7,6 +7,7 @@ use SilverStripe\CMS\Controllers\CMSPageEditController;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Core\Convert;
 use SilverStripe\Core\Manifest\ModuleLoader;
 use SilverStripe\Dev\Deprecation;
 use SilverStripe\Forms\CheckboxField;
@@ -763,7 +764,8 @@ class EditableFormField extends DataObject
             $field->setAttribute('data-msg-required', $errorMessage);
 
             if ($identifier = UserDefinedForm::config()->required_identifier) {
-                $title = $field->Title() . " <span class='required-identifier'>". $identifier . "</span>";
+                // The title is author-supplied plain text, so escape it before it is treated as raw HTML
+                $title = Convert::raw2xml((string) $field->Title()) . " <span class='required-identifier'>". $identifier . "</span>";
                 $field->setTitle(DBField::create_field('HTMLText', $title));
             }
         }
