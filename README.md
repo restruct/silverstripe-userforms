@@ -48,7 +48,7 @@ For a CMS 5.4 project. Your `require` section stays as it is: the forks keep the
    composer audit
    ```
 
-   `composer show` should list the `-pN` versions (`5.4.30-p1`, `2.4.8-p1`, `2.4.6-p1`, `6.4.10-p1` if the project uses userforms, `5.4.4-p1` if it uses mfa) and cms from the 5.4 line.
+   `composer show` should list the `-pN` versions (`5.4.31-p1`, `2.4.8-p1`, `2.4.6-p1`, `6.4.10-p1` if the project uses userforms, `5.4.4-p1` if it uses mfa) and cms from the 5.4 line.
    `composer audit` should not list any of the advisories this fork set handles. Then run `dev/build flush=1`.
 
 To stop using the forks (for example when moving to CMS 6), remove these repository entries again.
@@ -67,15 +67,15 @@ All advisories published for these packages in 2026 that affect their latest CMS
 
 | Package | Advisory | Title | Status | Upstream fix |
 |---|---|---|---|---|
-| framework | SS-2026-004<br>PKSA-s9ft-gn8c-nz8s | Password reset token account takeover | Backported in framework 5.4.30-p1 | [`06e668db01`](https://github.com/silverstripe/silverstripe-framework/commit/06e668db01050895bb7e767fbf0b368c1081f479) |
-| framework | CVE-2026-88989<br>PKSA-byd1-vwr7-j3ng | Auth bypass GridFieldDetailForm | Backported in framework 5.4.30-p1 | [`693c948bae`](https://github.com/silverstripe/silverstripe-framework/commit/693c948bae13dd2a854489baa575123ca3e60155) |
-| framework | CVE-2026-54720<br>PKSA-x6tz-s6v3-ynk3 | XSS attack through media embed | Backported in framework 5.4.30-p1 | [`1bcb02adfc`](https://github.com/silverstripe/silverstripe-framework/commit/1bcb02adfc365c6436dc26ab2f6dd32d97f3979b) |
-| framework | CVE-2026-91110<br>PKSA-mxm6-h6dq-vmtc | XSS using control bytes | Backported in framework 5.4.30-p1 | [`dbf965166d`](https://github.com/silverstripe/silverstripe-framework/commit/dbf965166da909739a197c95b27dd9ee2fde93c9) |
-| framework | CVE-2026-88987<br>PKSA-3ddc-hhgt-bqh9 | XSS via XHTML data URI | Backported in framework 5.4.30-p1. As upstream, `data:text/xml` is now removed as well | [`cea9c46eba`](https://github.com/silverstripe/silverstripe-framework/commit/cea9c46eba4be31a06adf6980494623385e1296d) |
-| framework | CVE-2026-88988<br>PKSA-v91s-x13r-xsps | XSS via SVG data URI | Backported in framework 5.4.30-p1 | [`9b61e6d04d`](https://github.com/silverstripe/silverstripe-framework/commit/9b61e6d04da1a3183c4ef4081cb64fd31ae0701f) |
-| framework | CVE-2026-91112<br>PKSA-r36n-y55f-yj29 | CMS_ACCESS_SecurityAdmin privilege escalation | Backported in framework 5.4.30-p1 | [`bb4d04a498`](https://github.com/silverstripe/silverstripe-framework/commit/bb4d04a498c34e21e428d029c4ce82bbdcce31b1) |
-| framework | CVE-2026-91114<br>PKSA-2w11-jnmw-7vn5 | Stored XSS via unescaped permission in PermissionCheckboxSetField | Backported in framework 5.4.30-p1 | [`3ac8440a3a`](https://github.com/silverstripe/silverstripe-framework/commit/3ac8440a3accc04e5dbca1a41513d628920e58c2) |
-| framework | CVE-2026-91113<br>PKSA-2h3f-jtk1-8f25 | User-controlled ClassName allows unauthorized record type change | Backported in framework 5.4.30-p1 | [`8b6e9c4514`](https://github.com/silverstripe/silverstripe-framework/commit/8b6e9c4514cbe37feeaf9ddddf796a3109448187) |
+| framework | SS-2026-004<br>PKSA-s9ft-gn8c-nz8s | Password reset token account takeover | Backported since framework 5.4.30-p1 | [`06e668db01`](https://github.com/silverstripe/silverstripe-framework/commit/06e668db01050895bb7e767fbf0b368c1081f479) |
+| framework | CVE-2026-88989<br>PKSA-byd1-vwr7-j3ng | Auth bypass GridFieldDetailForm | Backported since framework 5.4.30-p1 | [`693c948bae`](https://github.com/silverstripe/silverstripe-framework/commit/693c948bae13dd2a854489baa575123ca3e60155) |
+| framework | CVE-2026-54720<br>PKSA-x6tz-s6v3-ynk3 | XSS attack through media embed | Backported since framework 5.4.30-p1 | [`1bcb02adfc`](https://github.com/silverstripe/silverstripe-framework/commit/1bcb02adfc365c6436dc26ab2f6dd32d97f3979b) |
+| framework | CVE-2026-91110<br>PKSA-mxm6-h6dq-vmtc | XSS using control bytes | Backported since framework 5.4.30-p1 | [`dbf965166d`](https://github.com/silverstripe/silverstripe-framework/commit/dbf965166da909739a197c95b27dd9ee2fde93c9) |
+| framework | CVE-2026-88987<br>PKSA-3ddc-hhgt-bqh9 | XSS via XHTML data URI | Backported since framework 5.4.30-p1. As upstream, `data:text/xml` is now removed as well | [`cea9c46eba`](https://github.com/silverstripe/silverstripe-framework/commit/cea9c46eba4be31a06adf6980494623385e1296d) |
+| framework | CVE-2026-88988<br>PKSA-v91s-x13r-xsps | XSS via SVG data URI | Backported since framework 5.4.30-p1 | [`9b61e6d04d`](https://github.com/silverstripe/silverstripe-framework/commit/9b61e6d04da1a3183c4ef4081cb64fd31ae0701f) |
+| framework | CVE-2026-91112<br>PKSA-r36n-y55f-yj29 | CMS_ACCESS_SecurityAdmin privilege escalation | Backported since framework 5.4.30-p1 | [`bb4d04a498`](https://github.com/silverstripe/silverstripe-framework/commit/bb4d04a498c34e21e428d029c4ce82bbdcce31b1) |
+| framework | CVE-2026-91114<br>PKSA-2w11-jnmw-7vn5 | Stored XSS via unescaped permission in PermissionCheckboxSetField | Backported since framework 5.4.30-p1 | [`3ac8440a3a`](https://github.com/silverstripe/silverstripe-framework/commit/3ac8440a3accc04e5dbca1a41513d628920e58c2) |
+| framework | CVE-2026-91113<br>PKSA-2h3f-jtk1-8f25 | User-controlled ClassName allows unauthorized record type change | Backported since framework 5.4.30-p1 | [`8b6e9c4514`](https://github.com/silverstripe/silverstripe-framework/commit/8b6e9c4514cbe37feeaf9ddddf796a3109448187) |
 | framework | CVE-2026-91115<br>PKSA-bqyr-kn4k-vx5h | RCE via i18nTextCollectorTask writer parameter | Not applicable: the advisory affects framework >=6.0.0 only | - |
 | versioned | CVE-2026-55779<br>PKSA-nksq-cxj8-zb32 | XSS in archive admin restore | Backported in versioned 2.4.8-p1 | [`6e30a2cf8d`](https://github.com/silverstripe/silverstripe-versioned/commit/6e30a2cf8d4b9233690464da61bd0fc4d3e92952) |
 | **userforms** | CVE-2026-91111<br>PKSA-vyds-y4jb-5ff4 | Uploaded XML XSS | Backported in **assets** 2.4.6-p1: the fix is in silverstripe/assets. Like the upstream fix, userforms 6.4.10-p1 requires the patched assets release (`^2.4.6-p1`) | [`88750f95e8`](https://github.com/silverstripe/silverstripe-assets/commit/88750f95e8eafcae6ce41bc131056ca75d960d7f) |
@@ -86,6 +86,8 @@ All advisories published for these packages in 2026 that affect their latest CMS
 
 Already fixed by upstream in a CMS 5 release (update to that release or later; nothing to backport):
 
+- framework 5.4.31; in this fork from 5.4.31-p1: SS-2026-008, Unauthenticated RCE via form submissions (critical)
+- framework 5.4.31; in this fork from 5.4.31-p1: SS-2026-009, Login bypass for accounts without a password (critical)
 - assets 2.4.5: CVE-2026-24749, DBFile permission bypass
 - assets 2.4.6: SS-2026-003, RCE via renamed uploaded file
 - userforms 6.4.9: CVE-2026-54721, Remote code execution via userforms email subject
